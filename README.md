@@ -1,7 +1,7 @@
 # Kalvium Books
 
 ## Final Output: Link to the website
-https://kalvium-books-ca-parulchauhann.netlify.app/
+https://kalvium-book-parulchauhann.netlify.app/
 
 ## A website that displays a list of books - using React.
 Books are a very important part of everyone’s life. So it is very important that books should be available for everyone. Sometimes, there are cases where certain books are available only in certain areas.
