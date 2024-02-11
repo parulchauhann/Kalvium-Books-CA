@@ -7,17 +7,19 @@ function Registeration() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
   const [submit, setSubmit] = useState(false)
   const [isChecked, setIsChecked] = useState(false);
+  const [formData, setFormData] = useState({});
 
   const onSubmit = (data) => {
     if (isChecked) {
+      setFormData(data); 
       setSubmit(true);
+      setTimeout(() => {
+        setSubmit(false);
+        window.location.href = "/";
+      }, 2000);
     } else {
       alert("Please agree to the terms and conditions.");
     }
-    setTimeout(() => {
-      setSubmit(false)
-      window.location.href = "/"
-    }, 3000)
   };
 
   return (
@@ -86,7 +88,7 @@ function Registeration() {
             </div>
 
             <button type='submit' className='bg-blue-500 rounded text-white mt-4 font-semibold md:text-base block md:w-[340px] flex justify-center items-center h-5 mb-3 md:h-10 p-3.5 text-[12px]'
-              onClick={handleSubmit(onSubmit)}>Register</button>
+              >Register</button>
           </div>
         </div>
 
